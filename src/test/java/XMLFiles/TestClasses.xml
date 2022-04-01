@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Yetkili Erişim Criterias">
+        <parameter name="firstName" value="ali"/>
+        <parameter name="lastName" value="ali"/>
+        <parameter name="telephone" value="123456789"/>
+        <parameter name="address1" value="istanbul"/>
+        <parameter name="city" value="istanbul"/>
+        <parameter name="postCode" value="34100"/>
+        <classes>
+            <class name="testpackages.TestClass2_Yetkili">
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Yetkisiz Erişim Criterias">
+        <classes>
+            <class name="testpackages.TestClass1_Yetkisiz">
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
