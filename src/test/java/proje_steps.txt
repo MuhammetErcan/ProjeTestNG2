@@ -1,0 +1,26 @@
+Adres : http://opencart.abstracta.us/
+
+1.    Yeni bir proje acarak asagidaki acceptance kriterialari saglayan testleri olusturunuz.
+2.    Singleton bir driver ve ihtiyaciniz olan methodlari "utils" package'ina
+3.    Test classlarinizi "testpages" package'ina
+4.    XML dosyalarinizi "XMLFiles" package'ina yaziniz
+
+
+Acceptance Criterias
+1.    Yetkili bir kullanici olarak gecerli bir kullanici ve sifre ile login ve logout yapabilmeliyim
+    (Örnek: Bu gibi durumlarda yetkisiz girisler denemeleri de kontrol edilmeli)
+2.    Yetkili/Yetkisiz bir kullanici olarak sepete belirli bir ürün ekleyebilmeliyim
+3.    Yetkili/Yetkisiz bir kullanici olarak sepete belirli bir ürünü belirli bir sayida ekleyebilmeliyim
+4.    Yetkili/Yetkisiz bir kullanici olarak sepetteki ürünü silebilmeliyim
+5.    Yetkili/Yetkisiz bir kullanici olarak spette bulunan ürünün miktarini degistirebilmeliyim.
+6.    Yetkili/Yetkisiz bir kullanici olarak sepete ekledigim birden fazla ürünün isim ve fiyatlari ile toplma fiyat tutarli olmali
+7.    Yetkisiz bir kullanici olarak ürün checkout yapamamaliyim
+8.    Yetkili/Yetkisiz bir kullanici olarak ürün arayabilmeliyim
+9.    Yetkili/Yetkisiz bir kullanici olarak listelenen ürünleri isim/fiyat gibi özelliklerine göre siralayabilmeliyim
+10.    Yetkili bir kullanici olarak bir ürünü favoriler listesine alabilmeliyim
+11.    Yetkili/Yetkisiz bir kullanici olarak yetkililere mesaj gönderebilmeliyim
+12.    Yetkili bir kullanici olarak Account bilgilerimi güncelleyebilmeliyim
+13.    Yetkili bir kullanici olarak adres bilgisi ekleyebilmeliyim
+14.    Yetkili bir kullanici olarak adres bilgisi güncelleyebilmeliyim
+15.    Yetkili bir kullanici olarak bir ürün sepete satinalabilmeliyim
+16.    Yetkili bir kullanici olarak satin aldigim ürünü History de görebilmeliyim

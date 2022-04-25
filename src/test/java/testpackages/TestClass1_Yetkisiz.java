@@ -1,7 +1,11 @@
 package testpackages;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import utils.Browser;
+import utils.Driver;
 
 public class TestClass1_Yetkisiz extends BaseClass {
 

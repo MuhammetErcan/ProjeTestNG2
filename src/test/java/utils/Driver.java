@@ -8,43 +8,41 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 public class Driver {
-
     private static WebDriver driver;
-    public static WebDriver getDriver(){
+    private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    private static ThreadLocal<Browser> browserNames = new ThreadLocal<>();
+
+
+    public static WebDriver getDriver() {
         return getDriver(Browser.CHROME);
     }
 
-    public static WebDriver getDriver(Browser browser){
-        if(driver==null){
-            switch (browser){
-                case CHROME :
-                    WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
-                    break;
+    public static WebDriver getDriver(Browser browser) {
+        if (drivers.get() == null) {
+            browserNames.set(browser);
+            switch (browser) {
                 case FIREFOX:
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
-                    break;
-                case OPERA:
-                    WebDriverManager.operadriver().setup();
-                    driver=new OperaDriver();
+                    drivers.set(new FirefoxDriver());
                     break;
                 case EDGE:
                     WebDriverManager.edgedriver().setup();
-                    driver=new EdgeDriver();
+                    drivers.set(new EdgeDriver());
                     break;
                 default:
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    drivers.set(new ChromeDriver());
             }
         }
-        return driver;
+        return drivers.get();
     }
 
-    public static void quitDriver(){
-        if (driver!=null){
-            driver.quit();
-            driver=null;
+
+    public static void quitDriver() {
+        if (drivers.get() != null) {
+            drivers.get().quit();
+            drivers.set(null);
         }
     }
+
 }
